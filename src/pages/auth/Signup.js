@@ -60,7 +60,7 @@ const LoginContainer = styled.div`
   align-items: center;
   max-width: 100%;
   height: 80vh;
-  background-color: #d5dbdb;
+  background-color: #2e4053;
   border-radius: 10px;
   margin: 1.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 4px 10px 0 rgba(0, 0, 0, 0.11);
@@ -76,8 +76,8 @@ const FormContainer = styled.form`
 `;
 const SubHeading = styled.legend`
   font-weight: 600;
-  font-size: 2.4rem;
-  color: #283747;
+  font-size: 2.6rem;
+  color: #fff;
   text-align: center;
 `;
 const Input = styled.input`

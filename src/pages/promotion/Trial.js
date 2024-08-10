@@ -225,6 +225,8 @@ const TrialLessons = styled.div`
   border: 2px solid #283747;
   border-radius: 10px;
   padding: 1rem;
+  max-height: 42em;
+  overflow-y: auto;
 `;
 const TrialLesson = styled.p`
   text-align: start;
@@ -232,6 +234,7 @@ const TrialLesson = styled.p`
   border: 2px solid #f7dc6f;
   border-radius: 4px;
   padding: 0.5rem;
+  cursor: pointer;
 `;
 
 export default Trial;

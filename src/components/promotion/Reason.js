@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import section2 from '../images/section2.jpg';
+import section2 from '../../images/section2.jpg';
 
 const Reason = () => {
   return (

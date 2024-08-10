@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import hero from '../images/hero-section.webp';
+import hero from '../../images/hero-section.webp';
 import styled from 'styled-components';
 import axios from 'axios';
 
