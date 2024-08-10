@@ -18,6 +18,8 @@ import PanelNavbar from './components/panel/partials/PanelNavbar';
 import Lessons from './pages/panel/Lessons';
 import LiveLessons from './pages/panel/LiveLessons';
 import ProtectedLayout from './components/promotion/ProtectedLayout';
+import Messages from './pages/panel/Messages';
+import Notes from './pages/panel/Notes';
 
 const App = () => {
   return (
@@ -90,6 +92,14 @@ const App = () => {
             <Route
               path='canli-dersler'
               element={<LiveLessons />}
+            />
+            <Route
+              path='mesajlar'
+              element={<Messages />}
+            />
+            <Route
+              path='notlar'
+              element={<Notes />}
             />
           </Route>
         </Routes>

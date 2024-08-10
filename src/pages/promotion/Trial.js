@@ -236,5 +236,4 @@ const TrialLesson = styled.p`
   padding: 0.5rem;
   cursor: pointer;
 `;
-
 export default Trial;
