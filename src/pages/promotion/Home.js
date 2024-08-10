@@ -1,9 +1,9 @@
 import React from 'react';
-import VideoBox from '../../components/VideoBox';
-import Sss from '../../components/Sss';
-import EducationSearch from '../../components/EducationSearch';
-import Reason from '../../components/Reason';
-import CTA from '../../components/CTA';
+import VideoBox from '../../components/promotion/VideoBox';
+import Sss from '../../components/promotion/Sss';
+import EducationSearch from '../../components/promotion/EducationSearch';
+import Reason from '../../components/promotion/Reason';
+import CTA from '../../components/promotion/CTA';
 
 const Home = () => {
   return (

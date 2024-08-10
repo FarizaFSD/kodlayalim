@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from '../../../images/logo.png';
-import Cookies from '../../Cookies';
+import Cookies from '../Cookies';
 
 const Footer = () => {
   return (

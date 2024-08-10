@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import CTA from '../../components/CTA';
+import CTA from '../../components/promotion/CTA';
 import teens from '../../images/teens.jpg';
 import { Link } from 'react-router-dom';
 

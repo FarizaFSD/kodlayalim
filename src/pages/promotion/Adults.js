@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import adults from '../../images/adults.jpg';
-import CTA from '../../components/CTA';
+import CTA from '../../components/promotion/CTA';
 import { Link } from 'react-router-dom';
 
 const Adults = () => {
