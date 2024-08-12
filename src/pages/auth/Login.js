@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const login = () => {};
   return (
     <LoginContainer>
       <SubHeading>Giriş yap</SubHeading>
@@ -28,7 +29,7 @@ const Login = () => {
           <AskLink to='/kayit-ol'>Kayıt Ol</AskLink>
         </IsAccount>
 
-        <Button>Giriş Yap</Button>
+        <Button onClick={login}>Giriş Yap</Button>
       </FormContainer>
     </LoginContainer>
   );
