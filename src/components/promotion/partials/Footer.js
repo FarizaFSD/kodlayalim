@@ -68,7 +68,7 @@ const ContactLink = styled.a`
   }
 `;
 const Logo = styled.img`
-  width: 2rem;
+  width: 2.5rem;
   margin-left: 2rem;
 `;
 export default Footer;

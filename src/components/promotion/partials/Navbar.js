@@ -46,7 +46,7 @@ const NavContainer = styled.div`
   }
 `;
 const Logo = styled.img`
-  width: 2rem;
+  width: 2.5rem;
   margin-left: 2rem;
 `;
 const Authorization = styled.div`
@@ -82,6 +82,7 @@ const MyLink = styled(Link)`
   }
 `;
 const BtnLink = styled(Link)`
+  align-self: center;
   text-decoration: none;
   color: #fff;
   background-color: #283747;

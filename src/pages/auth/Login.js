@@ -1,11 +1,55 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
+import axios from 'axios';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const login = () => {};
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const girisYap = async () => {
+    try {
+      let response = await axios.post('http://127.0.0.1:8000/api/login', {
+        email,
+        password,
+      });
+      let { token, rol } = response.data;
+      localStorage.setItem('authToken', token);
+      <Navigate to='/panel/dersler' />;
+      console.log(token);
+    } catch (error) {
+      setErrorMessage(
+        'Giriş yaparken bir hata oluştu. Lütfen bilgilerinizi kontrol edin.'
+      );
+      console.error('Login error:', error);
+    }
+  };
+
+  const cikisYap = async () => {
+    try {
+      const token = localStorage.getItem('authToken');
+      let response = await axios.post(
+        'http://127.0.0.1:8000/api/logout',
+        {},
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      if (response.status == 200) {
+        localStorage.removeItem('authToken');
+      }
+    } catch (error) {
+      setErrorMessage(
+        'Giriş yaparken bir hata oluştu. Lütfen bilgilerinizi kontrol edin.'
+      );
+      console.error('Login error:', error);
+    }
+  };
+
   return (
     <LoginContainer>
       <SubHeading>Giriş yap</SubHeading>
@@ -29,8 +73,17 @@ const Login = () => {
           <AskLink to='/kayit-ol'>Kayıt Ol</AskLink>
         </IsAccount>
 
-        <Button onClick={login}>Giriş Yap</Button>
+        <Button
+          type='button'
+          onClick={girisYap}>
+          Giriş Yap
+        </Button>
       </FormContainer>
+      <Button
+        type='button'
+        onClick={cikisYap}>
+        Çıkış Yap
+      </Button>
     </LoginContainer>
   );
 };
