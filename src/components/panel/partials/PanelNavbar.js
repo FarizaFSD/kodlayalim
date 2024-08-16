@@ -22,6 +22,10 @@ const PanelNavContainer = styled.div`
   padding: 2rem;
 `;
 const Button = styled.button`
+  cursor: pointer;
+  &: hover {
+    background-color: #5d6d7e;
+  }
   border: none;
   border-radius: 7px;
   background-color: #283747;
