@@ -26,30 +26,6 @@ const Login = () => {
     }
   };
 
-  const cikisYap = async () => {
-    try {
-      const token = localStorage.getItem('authToken');
-      let response = await axios.post(
-        'http://127.0.0.1:8000/api/logout',
-        {},
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
-
-      if (response.status == 200) {
-        localStorage.removeItem('authToken');
-      }
-    } catch (error) {
-      setErrorMessage(
-        'Giriş yaparken bir hata oluştu. Lütfen bilgilerinizi kontrol edin.'
-      );
-      console.error('Login error:', error);
-    }
-  };
-
   return (
     <LoginContainer>
       <SubHeading>Giriş yap</SubHeading>
@@ -79,11 +55,6 @@ const Login = () => {
           Giriş Yap
         </Button>
       </FormContainer>
-      <Button
-        type='button'
-        onClick={cikisYap}>
-        Çıkış Yap
-      </Button>
     </LoginContainer>
   );
 };

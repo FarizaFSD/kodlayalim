@@ -1,9 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import axios from 'axios';
 
 const PanelNavbar = () => {
-  const cikisYap = () => {};
+  const [errorMessage, setErrorMessage] = useState('');
+  const cikisYap = async () => {
+    try {
+      const token = localStorage.getItem('authToken');
+      let response = await axios.post(
+        'http://127.0.0.1:8000/api/logout',
+        {},
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      if (response.status === 200) {
+        localStorage.removeItem('authToken');
+      }
+    } catch (error) {
+      setErrorMessage(
+        'Giriş yaparken bir hata oluştu. Lütfen bilgilerinizi kontrol edin.'
+      );
+      console.error('Login error:', error);
+    }
+  };
   return (
     <PanelNavContainer>
       <MyLink to='dersler'>Dersler</MyLink>
