@@ -86,7 +86,7 @@ const Paragraph = styled.p`
   color: #283747;
 `;
 const Search = styled.input`
-  width: 70%;
+  width: 400px;
   padding: 0.5rem;
   border-radius: 5px;
   border: none;
