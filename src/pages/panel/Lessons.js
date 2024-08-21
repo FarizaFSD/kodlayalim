@@ -1,9 +1,20 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
 
 const Lessons = () => {
   return (
-    <div>Lessons</div>
-  )
-}
+    <LessonsContainer>
+      <Heading>Dersler</Heading>
+    </LessonsContainer>
+  );
+};
 
-export default Lessons
+const LessonsContainer = styled.div`
+  background-color: #d6dbdf;
+  width: 100%;
+`;
+const Heading = styled.h1`
+  color: #283747;
+  text-align: center;
+`;
+export default Lessons;

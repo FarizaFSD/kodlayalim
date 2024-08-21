@@ -14,7 +14,7 @@ import Signup from './pages/auth/Signup';
 import Sss from './components/promotion/Sss';
 import KVKK from './components/promotion/KVKK';
 import Policy from './components/promotion/Policy';
-import PanelNavbar from './components/panel/partials/PanelNavbar';
+import PanelLayout from './pages/panel/PanelLayout'
 import Lessons from './pages/panel/Lessons';
 import LiveLessons from './pages/panel/LiveLessons';
 import ProtectedLayout from './components/promotion/ProtectedLayout';
@@ -117,12 +117,6 @@ const Layout = () => {
   );
 };
 
-const PanelLayout = () => {
-  return (
-    <>
-      <PanelNavbar />
-      <Outlet />
-    </>
-  );
-};
+
 export default App;
+

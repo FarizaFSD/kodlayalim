@@ -14,7 +14,7 @@ const Login = () => {
         email,
         password,
       });
-      let { token, rol } = response.data;
+      let { token } = response.data;
       localStorage.setItem('authToken', token);
       <Navigate to='/panel/dersler' />;
       console.log(token);

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import axios from 'axios';
-
+import logo from '../../../images/logo.jpg';
 const PanelNavbar = () => {
   const [errorMessage, setErrorMessage] = useState('');
   const cikisYap = async () => {
@@ -30,6 +30,10 @@ const PanelNavbar = () => {
   };
   return (
     <PanelNavContainer>
+      <Logo
+        src={logo}
+        alt='logo'
+      />
       <MyLink to='dersler'>Dersler</MyLink>
       <MyLink to='canli-dersler'>Canlı dersler</MyLink>
       <MyLink to='mesajlar'>Mesajlar</MyLink>
@@ -38,13 +42,22 @@ const PanelNavbar = () => {
     </PanelNavContainer>
   );
 };
+
+const Logo = styled.img`
+  width: 5rem;
+  border-radius: 5px;
+`;
 const PanelNavContainer = styled.div`
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  gap: 2rem;
   align-items: center;
   background-color: #aeb6bf;
   padding: 2rem;
 `;
+
 const Button = styled.button`
   cursor: pointer;
   &: hover {
