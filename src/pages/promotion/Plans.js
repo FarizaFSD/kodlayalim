@@ -43,14 +43,12 @@ const Plans = () => {
           el.id === 2 ? (
             <PlansCardBest>
               <PlansTitle>{el.title}</PlansTitle>
-              {el.id === 2 ? (
+            
                 <PlanIcon
                   src={bestSeller}
                   alt='best seller icon'
                 />
-              ) : (
-                ''
-              )}
+            
               <PlansText>{el.description}</PlansText>
               <PlansPrice>{el.price}</PlansPrice>
               <PlansButton>{el.button}</PlansButton>
@@ -58,14 +56,7 @@ const Plans = () => {
           ) : (
             <PlansCard key={el.id}>
               <PlansTitle>{el.title}</PlansTitle>
-              {el.id === 2 ? (
-                <PlanIcon
-                  src={bestSeller}
-                  alt='best seller icon'
-                />
-              ) : (
-                ''
-              )}
+          
               <PlansText>{el.description}</PlansText>
               <PlansPrice>{el.price}</PlansPrice>
               <PlansButton>{el.button}</PlansButton>

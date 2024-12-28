@@ -8,8 +8,8 @@ import axios from 'axios';
 const EducationSearch = () => {
   const [value, setValue] = useState('');
 
-  const handler = () => {
-    let response = axios.post('htts://proje-bir.altayagency.com/api/search', {
+  const handler = async () =>  {
+    let response = await axios.post('htts://proje-bir.altayagency.com/api/search', {
       value,
     });
     console.log(response);

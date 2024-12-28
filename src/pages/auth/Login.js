@@ -14,10 +14,15 @@ const Login = () => {
         email,
         password,
       });
-      let { token } = response.data;
-      localStorage.setItem('authToken', token);
-      <Navigate to='/panel/dersler' />;
-      console.log(token);
+      if(response.status === 200){
+        let { token } = response.data;
+        localStorage.setItem('authToken', token);
+        <Navigate to='/panel/dersler' />;
+      }else{
+        
+      }
+     
+      
     } catch (error) {
       setErrorMessage(
         'Giriş yaparken bir hata oluştu. Lütfen bilgilerinizi kontrol edin.'
@@ -25,6 +30,7 @@ const Login = () => {
       console.error('Login error:', error);
     }
   };
+
 
   return (
     <LoginContainer>

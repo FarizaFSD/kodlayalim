@@ -9,8 +9,8 @@ const VideoBox = () => {
   const [courses, setCourses] = useState([]);
   const [open, setOpen] = useState(false);
 
-  const fetchVideos = () => {
-    axios
+  const fetchVideos = async () => {
+    await axios
       .get('https://mocki.io/v1/a1e92535-adcd-4f28-8a3d-42ac6ec6c27d')
       .then((response) => {
         setCourses(response.data);
